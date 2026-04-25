@@ -1,0 +1,42 @@
+<!-- home.component.html -->
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-content text-center text-white">
+      <h1 class="display-3 fw-bold mb-3">TaskFlow</h1>
+      <p class="lead mb-4">Organize your team tasks effortlessly</p>
+      <button class="btn btn-light btn-lg px-5 shadow-sm" (click)="goToTasks()" routerLink="/tasks">
+        <i class="fas fa-tasks me-2"></i>View Tasks
+      </button>
+         </div>
+  </div>
+  
+  <!-- Advertisement Section -->
+  <div class="container mt-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="ad-card p-4 text-center">
+          <i class="fas fa-rocket fa-3x mb-3 text-primary"></i>
+          <h5>Boost Productivity</h5>
+          <p class="small">Get 30% off on premium subscription</p>
+          <button class="btn btn-sm btn-outline-primary">Learn More</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ad-card p-4 text-center">
+          <i class="fas fa-users fa-3x mb-3 text-success"></i>
+          <h5>Team Collaboration</h5>
+          <p class="small">Invite your team members now</p>
+          <button class="btn btn-sm btn-outline-success">Invite</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ad-card p-4 text-center">
+          <i class="fas fa-chart-line fa-3x mb-3 text-warning"></i>
+          <h5>Track Progress</h5>
+          <p class="small">Analytics dashboard available</p>
+          <button class="btn btn-sm btn-outline-warning">View Stats</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
