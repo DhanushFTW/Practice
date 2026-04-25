@@ -4,10 +4,24 @@
     <div class="hero-content text-center text-white">
       <h1 class="display-3 fw-bold mb-3">TaskFlow</h1>
       <p class="lead mb-4">Organize your team tasks effortlessly</p>
-      <button class="btn btn-light btn-lg px-5 shadow-sm" (click)="goToTasks()" routerLink="/tasks">
-        <i class="fas fa-tasks me-2"></i>View Tasks
-      </button>
-         </div>
+      
+      <!-- Show Login/Register buttons when NOT logged in -->
+      <div *ngIf="!isLoggedIn">
+        <button class="btn btn-light btn-lg px-5 me-3 shadow-sm" routerLink="/login">
+          <i class="fas fa-sign-in-alt me-2"></i>Login
+        </button>
+        <button class="btn btn-outline-light btn-lg px-5 shadow-sm" routerLink="/register">
+          <i class="fas fa-user-plus me-2"></i>Register
+        </button>
+      </div>
+
+      <!-- Show View Tasks button when logged in -->
+      <div *ngIf="isLoggedIn">
+        <button class="btn btn-light btn-lg px-5 shadow-sm" (click)="goToTasks()" routerLink="/tasks">
+          <i class="fas fa-tasks me-2"></i>View Tasks
+        </button>
+      </div>
+    </div>
   </div>
   
   <!-- Advertisement Section -->
