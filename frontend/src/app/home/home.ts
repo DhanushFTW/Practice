@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Route, Router, RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
+
 @Component({
   selector: 'app-home',
   imports: [CommonModule, RouterModule],
@@ -8,7 +10,14 @@ import { Route, Router, RouterModule } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home {
-   constructor(private router: Router) {}
+   
+ isLoggedIn: boolean = false;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.isLoggedIn = !!localStorage.getItem('currentUser');
+  }
 
   goToTasks() {
     this.router.navigate(['/tasks']);
