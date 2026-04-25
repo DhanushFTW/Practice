@@ -1,0 +1,18 @@
+<!-- tasks.component.html -->
+<div class="tasks-container">
+  <div class="container py-4">
+    <h2 class="text-center mb-4">My Tasks</h2>
+    
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let task of tasks">
+        <div class="task-card">
+          <div class="card-body">
+            <h5 class="card-title">{{ task.title }}</h5>
+            <p class="card-text">{{ task.description }}</p>
+            <button class="btn btn-primary">Do</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
